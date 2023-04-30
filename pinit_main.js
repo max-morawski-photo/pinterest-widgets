@@ -79,7 +79,7 @@
           var v = "";
           if (typeof el[att] === "string") {
             v = el[att];
-          } else {
+          } else if (typeof el.getAttribute === "function") {
             v = el.getAttribute(att);
           }
           return v;
